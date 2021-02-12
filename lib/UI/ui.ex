@@ -9,16 +9,20 @@ defmodule Conmon.UI do
   # alias Ratatouille.Constants
   alias Conmon.Util.HostStats
 
-  def init(_context) do
+  def init(context) do
     %{target: "?", hosts: []}
   end
 
   def update(model, msg) do
     case msg do
       :tick ->
+        [trace] = CommandServer.list_traces()
         new_hosts = HostServer.list()
         # L.d("update.tick: #{inspect(Enum.map(new_hosts, &to_string/1))}")
-        %{model | hosts: new_hosts}
+        %{
+          %{model | hosts: new_hosts}
+          | target: trace
+        }
 
       _ ->
         model
@@ -37,15 +41,19 @@ defmodule Conmon.UI do
   defp mlababel(hi) do
     with min <- HostStats.bottom_ping(hi),
          max <- HostStats.top_ping(hi),
-         avg <- HostStats.average_ping(hi) do
+         avg <- HostStats.average_ping(hi),
+         last <- HostStats.last_ping(hi) do
       label do
-        text(content: "[")
-        text(content: "min:#{HostStats.ping_string(min)}", color: time_color(min))
-        text(content: "|")
-        text(content: "max:#{HostStats.ping_string(max)}", color: time_color(max))
-        text(content: "|")
-        text(content: "avg:#{HostStats.ping_string(avg)}", color: time_color(avg))
-        text(content: "]")
+        text(content: "<")
+        text(content: "min", color: :green)
+        text(content: ":#{HostStats.ping_string(min)}", color: time_color(min))
+        text(content: "/")
+        text(content: "#{HostStats.ping_string(max)}:", color: time_color(max))
+        text(content: "max", color: :red)
+        text(content: ">(")
+        text(content: "#{HostStats.ping_string(avg)}", color: time_color(avg))
+        text(content: ")")
+        text(content: "last:#{HostStats.ping_string(last)}", color: time_color(last))
       end
     end
   end

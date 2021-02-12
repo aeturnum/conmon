@@ -19,6 +19,10 @@ defmodule Conmon.Service.CommandServer do
     GenServer.cast(@name, {:trace, loc})
   end
 
+  def list_traces() do
+    GenServer.call(@name, :list_traces)
+  end
+
   def info(info) do
     GenServer.cast(@name, info)
   end
@@ -47,6 +51,14 @@ defmodule Conmon.Service.CommandServer do
   def handle_cast(:stop, state) do
     stop_pings(state)
     {:noreply, state}
+  end
+
+  def handle_call(:list_traces, _from, state) do
+    {
+      :reply,
+      Enum.map(state.traces, fn trc -> trc.loc end),
+      state
+    }
   end
 
   def handle_call(_, _from, state) do

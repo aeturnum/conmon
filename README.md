@@ -1,21 +1,10 @@
 # Conmon
 
-**TODO: Add description**
+A hobby project to build a CURSES interface to show where the slow hops are between you and a remote host.
+
+![An image of Conmon ](google_trace.png)
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `conmon` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:conmon, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/conmon](https://hexdocs.pm/conmon).
+Right now you just need to clone this repository and use `mix` to run it. The next step would be to add the ability to pass command line arguments (like what to ping). At the moment it pings google, but this can easily be changed on line 39 of `commandserver.ex`.
 

@@ -24,3 +24,6 @@ conmon-*.tar
 
 # OS X
 .DS_Store
+
+# log when running
+log.log
