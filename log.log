@@ -1,0 +1,107 @@
+11:02:48.723 [debug]     20| Elixir.Conmon.Service.UDPServer.init/1
+    417| gen_server.init_it/2
+    385| gen_server.init_it/6
+    226| proc_lib.init_p_do_apply/3
+
+11:02:48.826 [debug] Starting %Ping[0]: ping www.google.com -i 5 
+11:02:48.861 [debug] Starting %Ping[2]: ping 172.217.5.100 -i 5 
+11:02:48.861 [debug] Starting %Ping[1]: ping 172.217.5.100 -i 0.2 -c 10
+16:28:12.652 [debug]     20| Elixir.Conmon.Service.UDPServer.init/1
+    417| gen_server.init_it/2
+    385| gen_server.init_it/6
+    226| proc_lib.init_p_do_apply/3
+
+16:28:12.761 [debug] Starting %Ping[0]: ping www.google.com -i 5 
+16:28:12.779 [debug] Starting %Ping[2]: ping 172.217.6.68 -i 5 
+16:28:12.780 [debug] Starting %Ping[1]: ping 172.217.6.68 -i 0.2 -c 10
+16:30:01.184 [debug]     20| Elixir.Conmon.Service.UDPServer.init/1
+    417| gen_server.init_it/2
+    385| gen_server.init_it/6
+    226| proc_lib.init_p_do_apply/3
+
+16:30:01.291 [debug] Starting %Ping[0]: ping www.google.com -i 5 
+16:30:01.311 [debug] Starting %Ping[2]: ping 172.217.6.68 -i 5 
+16:30:01.312 [debug] Starting %Ping[1]: ping 172.217.6.68 -i 0.2 -c 10
+16:30:10.860 [debug]     20| Elixir.Conmon.Service.UDPServer.init/1
+    417| gen_server.init_it/2
+    385| gen_server.init_it/6
+    226| proc_lib.init_p_do_apply/3
+
+16:30:10.967 [debug] Starting %Ping[0]: ping www.google.com -i 5 
+16:30:11.088 [debug] Starting %Ping[2]: ping 172.217.6.68 -i 5 
+16:30:11.089 [debug] Starting %Ping[1]: ping 172.217.6.68 -i 0.2 -c 10
+16:30:20.355 [debug]     20| Elixir.Conmon.Service.UDPServer.init/1
+    417| gen_server.init_it/2
+    385| gen_server.init_it/6
+    226| proc_lib.init_p_do_apply/3
+
+16:30:20.468 [debug] Starting %Ping[0]: ping www.google.com -i 5 
+16:30:20.488 [debug] Starting %Ping[2]: ping 172.217.6.68 -i 5 
+16:30:20.489 [debug] Starting %Ping[1]: ping 172.217.6.68 -i 0.2 -c 10
+16:31:07.319 [debug]     20| Elixir.Conmon.Service.UDPServer.init/1
+    417| gen_server.init_it/2
+    385| gen_server.init_it/6
+    226| proc_lib.init_p_do_apply/3
+
+16:31:07.422 [debug] Starting %Ping[0]: ping www.google.com -i 5 
+16:31:07.437 [debug] Starting %Ping[2]: ping 172.217.6.68 -i 5 
+16:31:07.438 [debug] Starting %Ping[1]: ping 172.217.6.68 -i 0.2 -c 10
+16:32:10.093 [debug]     20| Elixir.Conmon.Service.UDPServer.init/1
+    417| gen_server.init_it/2
+    385| gen_server.init_it/6
+    226| proc_lib.init_p_do_apply/3
+
+16:32:10.189 [debug] Starting %Ping[0]: ping www.google.com -i 5 
+16:32:10.303 [debug] Starting %Ping[2]: ping 172.217.6.68 -i 5 
+16:32:10.304 [debug] Starting %Ping[1]: ping 172.217.6.68 -i 0.2 -c 10
+16:37:08.480 [debug] :    20| Elixir.Conmon.Service.UDPServer.init/1
+    417| gen_server.init_it/2
+    385| gen_server.init_it/6
+    226| proc_lib.init_p_do_apply/3
+
+16:37:08.582 [debug] ping www.google.com []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    6| Elixir.ConmonTest.Commands.test ping/1
+    391| Elixir.ExUnit.Runner.exec_test/1
+    166| timer.tc/1
+    342| Elixir.ExUnit.Runner.-spawn_test_monitor/4-fun-1-/4
+
+16:37:08.582 [debug] Starting %Ping[0]: ping www.google.com -i 5 
+16:37:08.605 [debug] ping 172.217.5.100 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+16:37:08.605 [debug] ping 172.217.5.100 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+16:37:08.606 [debug] Starting %Ping[2]: ping 172.217.5.100 -i 5 
+16:37:08.607 [debug] Starting %Ping[1]: ping 172.217.5.100 -i 0.2 -c 10
+16:41:07.886 [debug] ping www.google.com []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    6| Elixir.ConmonTest.Commands.test ping/1
+    391| Elixir.ExUnit.Runner.exec_test/1
+    166| timer.tc/1
+    342| Elixir.ExUnit.Runner.-spawn_test_monitor/4-fun-1-/4
+
+16:41:07.888 [debug] Starting %Ping[0]: ping www.google.com -i 5 
+16:41:07.917 [debug] ping 172.217.6.68 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+16:41:07.918 [debug] ping 172.217.6.68 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+16:41:07.918 [debug] Starting %Ping[2]: ping 172.217.6.68 -i 5 
+16:41:07.919 [debug] Starting %Ping[1]: ping 172.217.6.68 -i 0.2 -c 10
