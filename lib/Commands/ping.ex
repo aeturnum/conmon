@@ -109,7 +109,7 @@ defmodule Conmon.Commands.Ping do
       {:stdout, ^spawner_os_pid, data} ->
         # {^pid, :data, :out, data} ->
         data
-        |> IO.inspect(label: "#{ping} stdout")
+        # |> IO.inspect(label: "#{ping} stdout")
         |> String.split("\n", trim: true)
         |> Enum.reduce(:ok, fn
           _, :stop ->

@@ -105,3 +105,753 @@
 
 16:41:07.918 [debug] Starting %Ping[2]: ping 172.217.6.68 -i 5 
 16:41:07.919 [debug] Starting %Ping[1]: ping 172.217.6.68 -i 0.2 -c 10
+19:40:40.812 [warn] The on_load function for module Elixir.ExTermbox.Bindings returned:
+{:error,
+ {:load_failed,
+  'Failed to load NIF library: \'dlopen(/Users/ddrexler/src/elixir/conmon/_build/dev/lib/ex_termbox/priv/termbox_bindings.so, 2): Symbol not found: _tb_change_cell\n  Referenced from: /Users/ddrexler/src/elixir/conmon/_build/dev/lib/ex_termbox/priv/termbox_bindings.so\n  Expected in: flat namespace\n in /Users/ddrexler/src/elixir/conmon/_build/dev/lib/ex_termbox/priv/termbox_bindings.so\''}}
+
+19:40:40.812 [info] Application conmon exited: Conmon.start(:normal, []) returned an error: shutdown: failed to start child: Ratatouille.Runtime.Supervisor
+    ** (EXIT) shutdown: failed to start child: Ratatouille.Window
+        ** (EXIT) an exception was raised:
+            ** (UndefinedFunctionError) function ExTermbox.Bindings.init/0 is undefined (module ExTermbox.Bindings is not available)
+                (ex_termbox 1.0.2) ExTermbox.Bindings.init()
+                (ratatouille 0.5.1) lib/ratatouille/window.ex:104: Ratatouille.Window.init/1
+                (stdlib 3.13.2) gen_server.erl:417: :gen_server.init_it/2
+                (stdlib 3.13.2) gen_server.erl:385: :gen_server.init_it/6
+                (stdlib 3.13.2) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+19:41:02.706 [warn] The on_load function for module Elixir.ExTermbox.Bindings returned:
+{:error,
+ {:load_failed,
+  'Failed to load NIF library: \'dlopen(/Users/ddrexler/src/elixir/conmon/_build/dev/lib/ex_termbox/priv/termbox_bindings.so, 2): Symbol not found: _tb_change_cell\n  Referenced from: /Users/ddrexler/src/elixir/conmon/_build/dev/lib/ex_termbox/priv/termbox_bindings.so\n  Expected in: flat namespace\n in /Users/ddrexler/src/elixir/conmon/_build/dev/lib/ex_termbox/priv/termbox_bindings.so\''}}
+
+19:41:02.707 [info] Application conmon exited: Conmon.start(:normal, []) returned an error: shutdown: failed to start child: Ratatouille.Runtime.Supervisor
+    ** (EXIT) shutdown: failed to start child: Ratatouille.Window
+        ** (EXIT) an exception was raised:
+            ** (UndefinedFunctionError) function ExTermbox.Bindings.init/0 is undefined (module ExTermbox.Bindings is not available)
+                (ex_termbox 1.0.2) ExTermbox.Bindings.init()
+                (ratatouille 0.5.1) lib/ratatouille/window.ex:104: Ratatouille.Window.init/1
+                (stdlib 3.13.2) gen_server.erl:417: :gen_server.init_it/2
+                (stdlib 3.13.2) gen_server.erl:385: :gen_server.init_it/6
+                (stdlib 3.13.2) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+19:41:41.032 [warn] The on_load function for module Elixir.ExTermbox.Bindings returned:
+{:error,
+ {:load_failed,
+  'Failed to load NIF library: \'dlopen(/Users/ddrexler/src/elixir/conmon/_build/dev/lib/ex_termbox/priv/termbox_bindings.so, 2): Symbol not found: _tb_change_cell\n  Referenced from: /Users/ddrexler/src/elixir/conmon/_build/dev/lib/ex_termbox/priv/termbox_bindings.so\n  Expected in: flat namespace\n in /Users/ddrexler/src/elixir/conmon/_build/dev/lib/ex_termbox/priv/termbox_bindings.so\''}}
+
+19:41:41.032 [info] Application conmon exited: Conmon.start(:normal, []) returned an error: shutdown: failed to start child: Ratatouille.Runtime.Supervisor
+    ** (EXIT) shutdown: failed to start child: Ratatouille.Window
+        ** (EXIT) an exception was raised:
+            ** (UndefinedFunctionError) function ExTermbox.Bindings.init/0 is undefined (module ExTermbox.Bindings is not available)
+                (ex_termbox 1.0.2) ExTermbox.Bindings.init()
+                (ratatouille 0.5.1) lib/ratatouille/window.ex:104: Ratatouille.Window.init/1
+                (stdlib 3.13.2) gen_server.erl:417: :gen_server.init_it/2
+                (stdlib 3.13.2) gen_server.erl:385: :gen_server.init_it/6
+                (stdlib 3.13.2) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+19:48:57.633 [debug] traceroute to www.google.com (172.217.6.36), 64 hops max, 52 byte packets
+
+19:48:57.672 [debug]  1  192.168.4.1 (192.168.4.1)  9.522 ms
+
+19:48:57.678 [debug] trace.notify -P ICMP %HM<1>[192.168.4.1]:9.52ms
+19:48:57.685 [debug] ping 192.168.4.1 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:57.685 [debug] ping 192.168.4.1 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:57.686 [debug] Starting %Ping[1]: ping 192.168.4.1 -i 0.2 -c 10
+19:48:57.686 [debug] Starting %Ping[2]: ping 192.168.4.1 -i 5 
+19:48:57.736 [debug]  2  lo0.bras1.albyca11.sonic.net (157.131.132.2)  4.003 ms
+
+19:48:57.736 [debug] trace.notify -P ICMP %HM<2>[157.131.132.2]:4.0ms
+19:48:57.736 [debug] ping 157.131.132.2 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:57.736 [debug] ping 157.131.132.2 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:57.736 [debug] Starting %Ping[3]: ping 157.131.132.2 -i 0.2 -c 10
+19:48:57.736 [debug] Starting %Ping[4]: ping 157.131.132.2 -i 5 
+19:48:57.780 [debug]  3  300.irb.cr1.albyca11.sonic.net (157.131.135.106)  14.726 ms
+
+19:48:57.780 [debug] trace.notify -P ICMP %HM<3>[157.131.135.106]:14.73ms
+19:48:57.780 [debug] ping 157.131.135.106 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:57.780 [debug] ping 157.131.135.106 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:57.780 [debug] Starting %Ping[5]: ping 157.131.135.106 -i 0.2 -c 10
+19:48:57.780 [debug] Starting %Ping[6]: ping 157.131.135.106 -i 5 
+19:48:57.829 [debug]  4  0.ae4.cr2.hywrca01.sonic.net (198.27.244.105)  17.959 ms
+
+19:48:57.829 [debug] trace.notify -P ICMP %HM<4>[198.27.244.105]:17.96ms
+19:48:57.829 [debug] ping 198.27.244.105 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:57.829 [debug] ping 198.27.244.105 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:57.829 [debug] Starting %Ping[7]: ping 198.27.244.105 -i 0.2 -c 10
+19:48:57.829 [debug] Starting %Ping[8]: ping 198.27.244.105 -i 5 
+19:48:57.983 [debug]  5  0.ae2.cr1.rcmdca11.sonic.net (157.131.209.129)  102.807 ms
+
+19:48:57.983 [debug] trace.notify -P ICMP %HM<5>[157.131.209.129]:102.81ms
+19:48:57.983 [debug] ping 157.131.209.129 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:57.983 [debug] ping 157.131.209.129 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:57.983 [debug] Starting %Ping[9]: ping 157.131.209.129 -i 0.2 -c 10
+19:48:57.983 [debug] Starting %Ping[10]: ping 157.131.209.129 -i 5 
+19:48:58.443 [debug] 198.27.244.105: timeout!
+19:48:58.833 [debug]  6  0.ae3.cr1.hywrca01.sonic.net (157.131.209.73)  832.267 ms
+
+19:48:58.834 [debug] trace.notify -P ICMP %HM<6>[157.131.209.73]:832.27ms
+19:48:58.834 [debug] ping 157.131.209.73 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:58.834 [debug] ping 157.131.209.73 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:48:58.834 [debug] Starting %Ping[11]: ping 157.131.209.73 -i 0.2 -c 10
+19:48:58.834 [debug] Starting %Ping[12]: ping 157.131.209.73 -i 5 
+19:49:20.656 [debug] traceroute to www.google.com (172.217.6.36), 64 hops max, 52 byte packets
+
+19:49:20.659 [debug]  1  192.168.4.1 (192.168.4.1)  2.286 ms
+
+19:49:20.663 [debug] trace.notify -P ICMP %HM<1>[192.168.4.1]:2.29ms
+19:49:20.663 [debug]  2  lo0.bras1.albyca11.sonic.net (157.131.132.2)  3.159 ms
+
+19:49:20.663 [debug] trace.notify -P ICMP %HM<2>[157.131.132.2]:3.16ms
+19:49:20.670 [debug] ping 192.168.4.1 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.670 [debug] ping 192.168.4.1 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.670 [debug] ping 157.131.132.2 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.670 [debug] ping 157.131.132.2 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.670 [debug] Starting %Ping[1]: ping 192.168.4.1 -i 0.2 -c 10
+19:49:20.670 [debug] Starting %Ping[4]: ping 157.131.132.2 -i 5 
+19:49:20.670 [debug] Starting %Ping[2]: ping 192.168.4.1 -i 5 
+19:49:20.670 [debug] Starting %Ping[3]: ping 157.131.132.2 -i 0.2 -c 10
+19:49:20.738 [debug]  3  301.irb.cr2.albyca11.sonic.net (157.131.135.98)  24.776 ms
+
+19:49:20.739 [debug] trace.notify -P ICMP %HM<3>[157.131.135.98]:24.78ms
+19:49:20.739 [debug] ping 157.131.135.98 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.739 [debug] ping 157.131.135.98 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.739 [debug] Starting %Ping[5]: ping 157.131.135.98 -i 0.2 -c 10
+19:49:20.739 [debug] Starting %Ping[6]: ping 157.131.135.98 -i 5 
+19:49:20.756 [debug]  4  0.ae4.cr2.hywrca01.sonic.net (198.27.244.105)  16.813 ms
+
+19:49:20.756 [debug] trace.notify -P ICMP %HM<4>[198.27.244.105]:16.81ms
+19:49:20.756 [debug] ping 198.27.244.105 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.756 [debug] ping 198.27.244.105 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.757 [debug] Starting %Ping[7]: ping 198.27.244.105 -i 0.2 -c 10
+19:49:20.757 [debug] Starting %Ping[8]: ping 198.27.244.105 -i 5 
+19:49:20.767 [debug]  5  0.ae2.cr1.rcmdca11.sonic.net (157.131.209.129)  10.862 ms
+
+19:49:20.767 [debug] trace.notify -P ICMP %HM<5>[157.131.209.129]:10.86ms
+19:49:20.768 [debug] ping 157.131.209.129 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.768 [debug] ping 157.131.209.129 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.768 [debug] Starting %Ping[9]: ping 157.131.209.129 -i 0.2 -c 10
+19:49:20.768 [debug] Starting %Ping[10]: ping 157.131.209.129 -i 5 
+19:49:20.804 [debug]  6  0.ae0.cr1.equinix-sj.sonic.net (75.101.36.253)  7.219 ms
+
+19:49:20.804 [debug] trace.notify -P ICMP %HM<6>[75.101.36.253]:7.22ms
+19:49:20.805 [debug] ping 75.101.36.253 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.805 [debug] ping 75.101.36.253 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.805 [debug] Starting %Ping[11]: ping 75.101.36.253 -i 0.2 -c 10
+19:49:20.805 [debug] Starting %Ping[12]: ping 75.101.36.253 -i 5 
+19:49:20.818 [debug]  7  0.ae0.cr1.equinix-sj.sonic.net (75.101.36.253)  12.990 ms
+
+19:49:20.818 [debug] trace.notify -P ICMP %HM<7>[75.101.36.253]:12.99ms
+19:49:20.847 [debug]  8  74.125.118.6 (74.125.118.6)  5.663 ms
+
+19:49:20.847 [debug] trace.notify -P ICMP %HM<8>[74.125.118.6]:5.66ms
+19:49:20.848 [debug] ping 74.125.118.6 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.848 [debug] ping 74.125.118.6 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.848 [debug] Starting %Ping[13]: ping 74.125.118.6 -i 0.2 -c 10
+19:49:20.848 [debug] Starting %Ping[14]: ping 74.125.118.6 -i 5 
+19:49:20.886 [debug]  9  108.170.243.1 (108.170.243.1)  7.360 ms
+
+19:49:20.886 [debug] trace.notify -P ICMP %HM<9>[108.170.243.1]:7.36ms
+19:49:20.886 [debug] ping 108.170.243.1 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.886 [debug] ping 108.170.243.1 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.887 [debug] Starting %Ping[15]: ping 108.170.243.1 -i 0.2 -c 10
+19:49:20.887 [debug] Starting %Ping[16]: ping 108.170.243.1 -i 5 
+19:49:20.915 [debug] 10  72.14.235.1 (72.14.235.1)  6.720 ms
+
+19:49:20.915 [debug] trace.notify -P ICMP %HM<10>[72.14.235.1]:6.72ms
+19:49:20.915 [debug] ping 72.14.235.1 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.915 [debug] ping 72.14.235.1 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.915 [debug] Starting %Ping[17]: ping 72.14.235.1 -i 0.2 -c 10
+19:49:20.916 [debug] Starting %Ping[18]: ping 72.14.235.1 -i 5 
+19:49:20.923 [debug] 11  72.14.235.1 (72.14.235.1)  7.753 ms
+
+19:49:20.923 [debug] trace.notify -P ICMP %HM<11>[72.14.235.1]:7.75ms
+19:49:20.935 [debug] 12  sfo03s08-in-f36.1e100.net (172.217.6.36)  5.106 ms
+
+19:49:20.935 [debug] trace.notify -P ICMP %HM<12>[172.217.6.36]:5.11ms
+19:49:20.935 [debug] ping 172.217.6.36 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.935 [debug] ping 172.217.6.36 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:20.935 [debug] Starting %Ping[19]: ping 172.217.6.36 -i 0.2 -c 10
+19:49:20.935 [debug] Starting %Ping[20]: ping 172.217.6.36 -i 5 
+19:49:22.171 [debug] 198.27.244.105: timeout!
+19:49:49.668 [debug] traceroute to www.google.com (172.217.6.68), 64 hops max, 52 byte packets
+
+19:49:49.670 [debug]  1  192.168.4.1 (192.168.4.1)  2.427 ms
+
+19:49:49.676 [debug] trace.notify -P ICMP %HM<1>[192.168.4.1]:2.43ms
+19:49:49.676 [debug]  2  lo0.bras1.albyca11.sonic.net (157.131.132.2)  2.347 ms
+
+19:49:49.676 [debug] trace.notify -P ICMP %HM<2>[157.131.132.2]:2.35ms
+19:49:49.684 [debug] ping 192.168.4.1 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.684 [debug] ping 192.168.4.1 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.684 [debug] ping 157.131.132.2 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.684 [debug] ping 157.131.132.2 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.685 [debug] Starting %Ping[1]: ping 192.168.4.1 -i 0.2 -c 10
+19:49:49.685 [debug] Starting %Ping[2]: ping 192.168.4.1 -i 5 
+19:49:49.685 [debug] Starting %Ping[3]: ping 157.131.132.2 -i 0.2 -c 10
+19:49:49.685 [debug] Starting %Ping[4]: ping 157.131.132.2 -i 5 
+19:49:49.692 [debug]  3  301.irb.cr2.albyca11.sonic.net (157.131.135.98)  18.731 ms
+
+19:49:49.692 [debug] trace.notify -P ICMP %HM<3>[157.131.135.98]:18.73ms
+19:49:49.692 [debug] ping 157.131.135.98 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.692 [debug] ping 157.131.135.98 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.692 [debug] Starting %Ping[5]: ping 157.131.135.98 -i 0.2 -c 10
+19:49:49.692 [debug] Starting %Ping[6]: ping 157.131.135.98 -i 5 
+19:49:49.747 [debug]  4  0.ae5.cr2.rcmdca11.sonic.net (198.27.244.97)  22.649 ms
+
+19:49:49.747 [debug] trace.notify -P ICMP %HM<4>[198.27.244.97]:22.65ms
+19:49:49.747 [debug] ping 198.27.244.97 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.747 [debug] ping 198.27.244.97 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.747 [debug] Starting %Ping[7]: ping 198.27.244.97 -i 0.2 -c 10
+19:49:49.747 [debug] Starting %Ping[8]: ping 198.27.244.97 -i 5 
+19:49:49.758 [debug]  5  0.ae2.cr1.rcmdca11.sonic.net (157.131.209.129)  11.343 ms
+
+19:49:49.759 [debug] trace.notify -P ICMP %HM<5>[157.131.209.129]:11.34ms
+19:49:49.759 [debug] ping 157.131.209.129 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.759 [debug] ping 157.131.209.129 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.759 [debug] Starting %Ping[9]: ping 157.131.209.129 -i 0.2 -c 10
+19:49:49.759 [debug] Starting %Ping[10]: ping 157.131.209.129 -i 5 
+19:49:49.830 [debug]  6  0.ae3.cr1.hywrca01.sonic.net (157.131.209.73)  70.951 ms
+
+19:49:49.830 [debug] trace.notify -P ICMP %HM<6>[157.131.209.73]:70.95ms
+19:49:49.830 [debug] ping 157.131.209.73 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.830 [debug] ping 157.131.209.73 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.830 [debug] Starting %Ping[11]: ping 157.131.209.73 -i 0.2 -c 10
+19:49:49.831 [debug] Starting %Ping[12]: ping 157.131.209.73 -i 5 
+19:49:49.849 [debug]  7  100.ae1.nrd1.equinix-sj.sonic.net (75.101.33.185)  4.518 ms
+
+19:49:49.849 [debug] trace.notify -P ICMP %HM<7>[75.101.33.185]:4.52ms
+19:49:49.850 [debug] ping 75.101.33.185 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.850 [debug] ping 75.101.33.185 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.850 [debug] Starting %Ping[13]: ping 75.101.33.185 -i 0.2 -c 10
+19:49:49.850 [debug] Starting %Ping[14]: ping 75.101.33.185 -i 5 
+19:49:49.854 [debug]  8  74.125.118.6 (74.125.118.6)  4.150 ms
+
+19:49:49.854 [debug] trace.notify -P ICMP %HM<8>[74.125.118.6]:4.15ms
+19:49:49.854 [debug] ping 74.125.118.6 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.854 [debug] ping 74.125.118.6 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.854 [debug] Starting %Ping[15]: ping 74.125.118.6 -i 0.2 -c 10
+19:49:49.855 [debug] Starting %Ping[16]: ping 74.125.118.6 -i 5 
+19:49:49.859 [debug]  9  74.125.118.6 (74.125.118.6)  4.666 ms
+
+19:49:49.859 [debug] trace.notify -P ICMP %HM<9>[74.125.118.6]:4.67ms
+19:49:49.894 [debug] 10  108.170.242.241 (108.170.242.241)  9.252 ms
+
+19:49:49.894 [debug] trace.notify -P ICMP %HM<10>[108.170.242.241]:9.25ms
+19:49:49.894 [debug] ping 108.170.242.241 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.894 [debug] ping 108.170.242.241 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.894 [debug] Starting %Ping[17]: ping 108.170.242.241 -i 0.2 -c 10
+19:49:49.894 [debug] Starting %Ping[18]: ping 108.170.242.241 -i 5 
+19:49:49.913 [debug] 11  sfo07s17-in-f68.1e100.net (172.217.6.68)  5.285 ms
+
+19:49:49.913 [debug] trace.notify -P ICMP %HM<11>[172.217.6.68]:5.29ms
+19:49:49.914 [debug] ping 172.217.6.68 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.914 [debug] ping 172.217.6.68 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:49:49.914 [debug] Starting %Ping[19]: ping 172.217.6.68 -i 0.2 -c 10
+19:49:49.914 [debug] Starting %Ping[20]: ping 172.217.6.68 -i 5 
+19:49:50.568 [debug] 198.27.244.97: timeout!
+19:50:10.080 [debug] traceroute to www.google.com (172.217.6.68), 64 hops max, 52 byte packets
+
+19:50:10.083 [debug]  1  192.168.4.1 (192.168.4.1)  4.155 ms
+
+19:50:10.088 [debug] trace.notify -P ICMP %HM<1>[192.168.4.1]:4.16ms
+19:50:10.088 [debug]  2  lo0.bras1.albyca11.sonic.net (157.131.132.2)  3.964 ms
+
+19:50:10.088 [debug] trace.notify -P ICMP %HM<2>[157.131.132.2]:3.96ms
+19:50:10.091 [debug] ping 192.168.4.1 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.092 [debug] ping 192.168.4.1 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.092 [debug] Starting %Ping[1]: ping 192.168.4.1 -i 0.2 -c 10
+19:50:10.092 [debug] ping 157.131.132.2 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.092 [debug] Starting %Ping[2]: ping 192.168.4.1 -i 5 
+19:50:10.092 [debug] ping 157.131.132.2 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.092 [debug] Starting %Ping[3]: ping 157.131.132.2 -i 0.2 -c 10
+19:50:10.092 [debug] Starting %Ping[4]: ping 157.131.132.2 -i 5 
+19:50:10.106 [debug]  3  301.irb.cr2.albyca11.sonic.net (157.131.135.98)  17.882 ms
+
+19:50:10.106 [debug] trace.notify -P ICMP %HM<3>[157.131.135.98]:17.88ms
+19:50:10.106 [debug] ping 157.131.135.98 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.106 [debug] ping 157.131.135.98 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.106 [debug] Starting %Ping[5]: ping 157.131.135.98 -i 0.2 -c 10
+19:50:10.106 [debug] Starting %Ping[6]: ping 157.131.135.98 -i 5 
+19:50:10.132 [debug]  4  0.ae5.cr2.rcmdca11.sonic.net (198.27.244.97)  25.961 ms
+
+19:50:10.132 [debug] trace.notify -P ICMP %HM<4>[198.27.244.97]:25.96ms
+19:50:10.132 [debug] ping 198.27.244.97 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.132 [debug] ping 198.27.244.97 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.132 [debug] Starting %Ping[7]: ping 198.27.244.97 -i 0.2 -c 10
+19:50:10.133 [debug] Starting %Ping[8]: ping 198.27.244.97 -i 5 
+19:50:10.210 [debug]  5  0.ae2.cr1.rcmdca11.sonic.net (157.131.209.129)  77.456 ms
+
+19:50:10.210 [debug] trace.notify -P ICMP %HM<5>[157.131.209.129]:77.46ms
+19:50:10.210 [debug] ping 157.131.209.129 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.210 [debug] ping 157.131.209.129 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.210 [debug] Starting %Ping[9]: ping 157.131.209.129 -i 0.2 -c 10
+19:50:10.210 [debug] Starting %Ping[10]: ping 157.131.209.129 -i 5 
+19:50:10.277 [debug]  6  0.ae0.cr1.equinix-sj.sonic.net (75.101.36.253)  66.439 ms
+
+19:50:10.277 [debug] trace.notify -P ICMP %HM<6>[75.101.36.253]:66.44ms
+19:50:10.277 [debug] ping 75.101.36.253 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.277 [debug] ping 75.101.36.253 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.277 [debug] Starting %Ping[11]: ping 75.101.36.253 -i 0.2 -c 10
+19:50:10.277 [debug] Starting %Ping[12]: ping 75.101.36.253 -i 5 
+19:50:10.292 [debug]  7  100.ae1.nrd1.equinix-sj.sonic.net (75.101.33.185)  14.438 ms
+
+19:50:10.292 [debug] trace.notify -P ICMP %HM<7>[75.101.33.185]:14.44ms
+19:50:10.292 [debug] ping 75.101.33.185 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.292 [debug] ping 75.101.33.185 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.292 [debug] Starting %Ping[13]: ping 75.101.33.185 -i 0.2 -c 10
+19:50:10.292 [debug] Starting %Ping[14]: ping 75.101.33.185 -i 5 
+19:50:10.298 [debug]  8  74.125.118.6 (74.125.118.6)  5.448 ms
+
+19:50:10.298 [debug] trace.notify -P ICMP %HM<8>[74.125.118.6]:5.45ms
+19:50:10.298 [debug] ping 74.125.118.6 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.298 [debug] ping 74.125.118.6 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.298 [debug] Starting %Ping[15]: ping 74.125.118.6 -i 0.2 -c 10
+19:50:10.298 [debug] Starting %Ping[16]: ping 74.125.118.6 -i 5 
+19:50:10.306 [debug]  9  74.125.118.6 (74.125.118.6)  8.007 ms
+
+19:50:10.307 [debug] trace.notify -P ICMP %HM<9>[74.125.118.6]:8.01ms
+19:50:10.314 [debug] 10  108.170.242.241 (108.170.242.241)  6.783 ms
+
+19:50:10.314 [debug] trace.notify -P ICMP %HM<10>[108.170.242.241]:6.78ms
+19:50:10.314 [debug] ping 108.170.242.241 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.314 [debug] ping 108.170.242.241 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.314 [debug] Starting %Ping[17]: ping 108.170.242.241 -i 0.2 -c 10
+19:50:10.314 [debug] Starting %Ping[18]: ping 108.170.242.241 -i 5 
+19:50:10.319 [debug] 11  sfo07s17-in-f68.1e100.net (172.217.6.68)  5.021 ms
+
+19:50:10.319 [debug] trace.notify -P ICMP %HM<11>[172.217.6.68]:5.02ms
+19:50:10.320 [debug] ping 172.217.6.68 [interval: 0.2, count: 10]:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    97| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.320 [debug] ping 172.217.6.68 []:    14| Elixir.Conmon.Service.CommandServer.ping/2
+    99| Elixir.Conmon.Service.HostServer.add_hi/2
+    42| Elixir.Conmon.Service.HostServer.handle_cast/2
+    680| gen_server.try_dispatch/4
+    756| gen_server.handle_msg/6
+    226| proc_lib.init_p_do_apply/3
+
+19:50:10.320 [debug] Starting %Ping[19]: ping 172.217.6.68 -i 0.2 -c 10
+19:50:10.320 [debug] Starting %Ping[20]: ping 172.217.6.68 -i 5 
+19:50:10.940 [debug] 198.27.244.97: timeout!

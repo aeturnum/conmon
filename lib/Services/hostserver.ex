@@ -51,7 +51,7 @@ defmodule Conmon.Service.HostServer do
   end
 
   def handle_info(msg, state) do
-    IO.puts("handle_info: #{inspect(self())} #{inspect(msg)}")
+    # IO.puts("handle_info: #{inspect(self())} #{inspect(msg)}")
     {:noreply, state}
   end
 

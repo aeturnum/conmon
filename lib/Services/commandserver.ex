@@ -28,7 +28,12 @@ defmodule Conmon.Service.CommandServer do
   end
 
   def init(_) do
-    {:ok, %{pings: [], traces: [], id: 0}}
+    {:ok, %{pings: [], traces: [], id: 0}, {:continue, :ok}}
+  end
+
+  def handle_continue(_, state) do
+    trace("www.google.com")
+    {:noreply, state}
   end
 
   def handle_cast({:ping, remote_location, opts}, state) do
@@ -56,7 +61,7 @@ defmodule Conmon.Service.CommandServer do
   end
 
   def handle_info(msg, state) do
-    IO.puts("handle_info: #{inspect(self())} #{inspect(msg)}")
+    # IO.puts("handle_info: #{inspect(self())} #{inspect(msg)}")
     {:noreply, state}
   end
 
