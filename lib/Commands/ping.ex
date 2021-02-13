@@ -17,7 +17,7 @@ defmodule Conmon.Commands.Ping do
   def new(id, loc, opts \\ [])
 
   def new(id, :timeout, _) do
-    L.e("Trying to start ping to :timeout!")
+    # L.e("Trying to start ping to :timeout!")
 
     %Ping{loc: nil, id: id}
     |> TStamp.stamp()
@@ -35,7 +35,12 @@ defmodule Conmon.Commands.Ping do
   defp set_option(p, _options, _key, :error), do: p
   defp set_option(p, _options, key, {:ok, value}), do: Map.put(p, key, value)
 
-  def stop(%Ping{task: %{pid: pid}}), do: send(pid, :stop)
+  def stop(p = %Ping{task: t = %{pid: pid}}) do
+    # L.e("Stopping ping #{p}")
+    send(pid, :stop)
+    Task.shutdown(t, 1000)
+    L.e("Ping #{p} Stopped!")
+  end
 
   defp add_response(values, ping), do: %{ping | results: [HostMessage.new(values) | ping.results]}
 
@@ -104,6 +109,7 @@ defmodule Conmon.Commands.Ping do
         |> listen(pids)
 
       :stop ->
+        # L.e("Got stop message for #{ping}")
         Exexec.stop(exexec_pid)
 
       {:stdout, ^spawner_os_pid, data} ->

@@ -11,7 +11,7 @@ defmodule Conmon.Service.CommandServer do
   end
 
   def ping(loc, opts \\ []) do
-    L.t("ping #{loc} #{inspect(opts)}")
+    # L.t("ping #{loc} #{inspect(opts)}")
     GenServer.cast(@name, {:ping, loc, opts})
   end
 
@@ -19,20 +19,26 @@ defmodule Conmon.Service.CommandServer do
     GenServer.cast(@name, {:trace, loc})
   end
 
-  def list_traces() do
-    GenServer.call(@name, :list_traces)
-  end
-
   def info(info) do
     GenServer.cast(@name, info)
   end
 
+  def list_traces() do
+    GenServer.call(@name, :list_traces)
+  end
+
   def halt() do
-    GenServer.cast(@name, :stop)
+    GenServer.call(@name, :stop)
+    GenServer.stop(@name, :shutdown, 1000)
   end
 
   def init(_) do
     {:ok, %{pings: [], traces: [], id: 0}, {:continue, :ok}}
+  end
+
+  def terminate(reason, state) do
+    L.e("CommandServer.terminate - #{inspect(reason)}, #{inspect(state)}")
+    stop_pings(state)
   end
 
   def handle_continue(_, state) do
@@ -48,12 +54,15 @@ defmodule Conmon.Service.CommandServer do
     {:noreply, state |> add_trace(remote_location)}
   end
 
-  def handle_cast(:stop, state) do
-    stop_pings(state)
-    {:noreply, state}
+  def handle_call(:stop, _from, state) do
+    # L.d("handle_call(:stop)")
+    state = stop_pings(state)
+    {:reply, :ok, state}
   end
 
   def handle_call(:list_traces, _from, state) do
+    # L.d("handle_call(:list_traces)")
+
     {
       :reply,
       Enum.map(state.traces, fn trc -> trc.loc end),
@@ -61,7 +70,8 @@ defmodule Conmon.Service.CommandServer do
     }
   end
 
-  def handle_call(_, _from, state) do
+  def handle_call(arg, _from, state) do
+    L.e("CommandServer: Unexpected handle_call: #{inspect(arg)}")
     {:reply, nil, state}
   end
 
@@ -73,12 +83,15 @@ defmodule Conmon.Service.CommandServer do
   end
 
   def handle_info(msg, state) do
-    # IO.puts("handle_info: #{inspect(self())} #{inspect(msg)}")
+    L.e("handle_info: #{inspect(self())} #{inspect(msg)}")
     {:noreply, state}
   end
 
-  def stop_pings(%{pings: ps}),
-    do: ps |> Enum.each(fn ping -> Conmon.Commands.Ping.stop(ping) end)
+  def stop_pings(state = %{pings: ps}) do
+    # L.e("CommandServer.stop_pings()")
+    Enum.each(ps, fn ping -> Conmon.Commands.Ping.stop(ping) end)
+    %{state | pings: []}
+  end
 
   defp add_trace(s = %{traces: trs, id: id}, loc, delay \\ 0) do
     %{

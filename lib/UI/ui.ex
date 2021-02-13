@@ -2,14 +2,14 @@ defmodule Conmon.UI do
   @behaviour Ratatouille.App
 
   import Ratatouille.View
-  alias Conmon.Util.L
+  # alias Conmon.Util.L
   alias Conmon.Service.CommandServer
   alias Conmon.Service.HostServer
   alias Ratatouille.Runtime.Subscription
   # alias Ratatouille.Constants
   alias Conmon.Util.HostStats
 
-  def init(context) do
+  def init(_context) do
     %{target: "?", hosts: []}
   end
 
@@ -18,6 +18,7 @@ defmodule Conmon.UI do
       :tick ->
         [trace] = CommandServer.list_traces()
         new_hosts = HostServer.list()
+        # CommandServer.halt()
         # L.d("update.tick: #{inspect(Enum.map(new_hosts, &to_string/1))}")
         %{
           %{model | hosts: new_hosts}

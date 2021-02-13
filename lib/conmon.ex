@@ -4,6 +4,8 @@ defmodule Conmon do
   def start(_type, _args) do
     # don't run if we're testing
 
+    Conmon.Util.L.init()
+
     Supervisor.start_link(
       children(),
       strategy: :one_for_one,
@@ -35,6 +37,8 @@ defmodule Conmon do
     #
     # Another, perhaps better, option is `System.stop/0`, but this results in a
     # rather annoying lag when quitting the terminal application.
-    System.halt()
+    Conmon.Util.L.set_print(true)
+    Conmon.Service.CommandServer.halt()
+    System.stop()
   end
 end
